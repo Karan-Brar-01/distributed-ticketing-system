@@ -1,17 +1,15 @@
 # Distributed Ticket Reservation System
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-54.206.9.0-2ea44f?style=for-the-badge&logo=amazonaws)](http://54.206.9.0)
 [![CI](https://github.com/Karan-Brar-01/distributed-ticketing-system/actions/workflows/ci.yml/badge.svg)](https://github.com/Karan-Brar-01/distributed-ticketing-system/actions/workflows/ci.yml)
 [![Docker](https://img.shields.io/badge/Docker_Compose-10_Containers-blue?style=for-the-badge&logo=docker)](docker-compose.yml)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql)](docker-compose.yml)
 [![Redis](https://img.shields.io/badge/Redis-7-red?style=for-the-badge&logo=redis)](docker-compose.yml)
 [![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3-orange?style=for-the-badge&logo=rabbitmq)](docker-compose.yml)
 
-> 🚀 **LIVE CLOUD DEPLOYMENT (AWS EC2):**  
-> **[👉 Click here to open the Live System: http://54.206.9.0](http://54.206.9.0)**  
-> *(Running live on AWS EC2 across 10 Docker containers behind Nginx reverse proxy)*  
-> * **Customer Booking Journey:** [http://54.206.9.0](http://54.206.9.0)  
-> * **Engineering System Lab:** [http://54.206.9.0/lab](http://54.206.9.0/lab) *(Live 50-concurrency seat races & Nginx load balancing)*  
+> 🐳 **LOCAL DOCKER DEPLOYMENT:**  
+> Run locally with `docker-compose up --build` across 10 Docker containers behind Nginx reverse proxy.  
+> * **Customer Booking Journey:** `http://localhost`  
+> * **Engineering System Lab:** `http://localhost/lab` *(50-concurrency seat races & Nginx load balancing)*  
 > * **Seeded Demo Accounts:** `user@demo.com` / `user123` | **Admin:** `admin@demo.com` / `admin123`
 
 ---
@@ -22,8 +20,8 @@ A containerized ticket-booking platform designed to prevent double booking under
 
 | Resource | Link |
 | :--- | :--- |
-| 🌐 **Live Web Application** | **[http://54.206.9.0](http://54.206.9.0)** |
-| 🔬 **System Engineering Lab** | **[http://54.206.9.0/lab](http://54.206.9.0/lab)** |
+| 🌐 **Web Application** | `http://localhost` *(run locally with Docker Compose)* |
+| 🔬 **System Engineering Lab** | `http://localhost/lab` |
 | 🧪 **Concurrency Integration Tests** | [`services/booking-service/tests/booking-concurrency.test.ts`](services/booking-service/tests/booking-concurrency.test.ts) |
 | 🐳 **Docker Compose Topology** | [`docker-compose.yml`](docker-compose.yml) |
 | 🔀 **Nginx Load Balancer Config** | [`nginx/nginx.conf`](nginx/nginx.conf) |
@@ -34,7 +32,7 @@ A containerized ticket-booking platform designed to prevent double booking under
 
 ### Product Mode
 
-Product Mode is the default customer experience at [http://54.206.9.0](http://54.206.9.0) (or `http://localhost`):
+Product Mode is the default customer experience at `http://localhost`:
 
 1. Browse the event catalog and open an event.
 2. Inspect the live seat map and select an available seat.
